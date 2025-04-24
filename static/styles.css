@@ -1,0 +1,162 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('peakpx(9).jpg'); /* Ensure the image exists in the correct directory */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Login container styling */
+#loginContainer {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    height: 60vh;
+    width: 50vw;
+    max-width: 90%;
+    max-height: 90%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    overflow-y: auto;
+}
+
+#loginContainer input {
+    width: 90%;
+    padding: 6px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 21px;
+    text-align: center;
+}
+#username::placeholder {
+    font-family: 'tourney'; /* Change to your desired font */
+    font-size: 16px; /* Adjust the font size */
+    color: #888; /* Change the placeholder text color */
+    padding-left: 5%;
+}
+
+/* Chatroom styling */
+#chatroom {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    height: 50vh;
+    width: 50vw;
+    max-width: 90%;
+    max-height: 90%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    overflow-y: auto; /* Enable scrolling for messages */
+}
+.system-message {
+    font-style: italic;
+    color: green;
+    margin: 4px 0;
+}
+
+.left-user {
+    color: red;
+}
+
+
+   
+
+
+/* Add animation to the logo */
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+    animation: rotateLogo 5s linear infinite; /* Rotate the logo in 5 seconds continuously */
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+#messages{
+    height: 70%;
+    width: 90%;
+}
+#messageInput{
+    width: 70%;
+    padding: 6px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    text-align: center;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+    #chatroom {
+        height: 60vh;
+        width: 80vw;
+    }
+
+    #loginContainer {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    #chatroom {
+        height: 70vh;
+        width: 90vw;
+    }
+
+    #loginContainer input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    #chatroom {
+        height: 80vh;
+        width: 95vw;
+    }
+
+    #loginContainer input {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+}

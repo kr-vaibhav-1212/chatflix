@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Chatroom</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+    <div id="chatroom">
+        <h2>Welcome, {{ username }}!</h2>
+        <div id="messages"></div>
+        <div id="inputarea">
+            <input type="text" id="messageInput" placeholder="Type a message">
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+
+    <!-- 👇 Main JavaScript file that contains all the chat logic -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <!-- 👇 Pass the username to JS after loading script.js -->
+    <script >
+        window.username = "{{ username }}";  // This lets script.js access the username
+    </script>
+</body>
+</html>

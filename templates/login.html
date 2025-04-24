@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <noscript>
+        <p style="color: red; font-weight: bold; text-align: center;">
+            JavaScript is required to use this chatroom. Please enable JavaScript in your browser.
+        </p>
+    </noscript>
+    <div id="loginContainer">
+        <h1>WELCOME TO THE CHATROOM</h1>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Chatroom Logo" id="logo">
+        <p>Please enter your username to join the chat.</p>
+        <form method="get" action="/chat" id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" required aria-modal="Username">
+            <br><br>
+            <button type="submit" aria-label="Join Chat">Join Chat</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
